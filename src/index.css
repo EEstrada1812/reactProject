@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.image {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Customers Monday"
+    "Customers Tuesday"
+    "Customers Wednesday"
+    "Customers Thursday"
+    "Customers Friday"
+    "Customers Saturday"
+    "Customers Sunday";
+}
+
+#Customers { grid-area: Customers; }
+
+#Monday { grid-area: Monday; }
+
+#Tuesday { grid-area: Tuesday; }
+
+#Wednesday { grid-area: Wednesday; }
+
+#Thursday { grid-area: Thursday; }
+
+#Friday { grid-area: Friday; }
+
+#Saturday { grid-area: Saturday; }
+
+#Sunday { grid-area: Sunday; }
+
