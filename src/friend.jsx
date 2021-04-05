@@ -13,10 +13,10 @@ const Container = styled.div`
 `;
 
 
-export default class Task extends React.Component {
+export default class Friend extends React.Component {
     render() {
         return (
-            <Draggable draggableId={this.props.task.id} index={this.props.index}>
+            <Draggable draggableId={this.props.friend.id} index={this.props.index}>
                 {(provided, snapshot) => (
                     <Container
                         {...provided.draggableProps}
@@ -26,14 +26,13 @@ export default class Task extends React.Component {
                     >
                         <div className="card-container">
                             <div className="customer-thumb image-container">
-                                <img src={this.props.task.content} className="image" alt="profile-img" /> 
+                                <img src={this.props.friend.content} className="image" alt="profile-img" /> 
                             </div>
 
                             <div className="card-title">
-                                <p>{this.props.task.info}</p>
+                                <p>{this.props.friend.info}</p>
                             </div>
-                            
-                            {/* {this.props.task.content} */}
+
                         </div>
 
                     </Container>

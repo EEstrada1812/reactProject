@@ -4,7 +4,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header" id="header">
-                <img className='logo' src="images/Split-Logo.png"></img>
+                <img className='logo' src="images/Split-Logo.png" alt="split-logo"></img>
                 <h1>Split Shop</h1>
             </div>
         );

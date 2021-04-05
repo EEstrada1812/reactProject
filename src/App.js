@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import '@atlaskit/css-reset';
 import styled from 'styled-components';
 import { DragDropContext } from 'react-beautiful-dnd';
-import initialData from './test';
+import initialData from './initial-data';
 import Column from './column';
 import Header from './header';
 
@@ -35,13 +35,13 @@ class App extends React.Component {
     const finish = this.state.columns[destination.droppableId];
 
     if (start === finish) {
-      const newTaskIds = Array.from(start.taskIds);
-      newTaskIds.splice(source.index, 1);
-      newTaskIds.splice(destination.index, 0, draggableId);
+      const newFriendIds = Array.from(start.friendIds);
+      newFriendIds.splice(source.index, 1);
+      newFriendIds.splice(destination.index, 0, draggableId);
 
       const newColumn = {
         ...start,
-        taskIds: newTaskIds,
+        friendIds: newFriendIds,
       };
 
       const newState = {
@@ -57,18 +57,18 @@ class App extends React.Component {
       }
 
       //moving from one list to another
-      const startTaskIds = Array.from(start.taskIds);
-      startTaskIds.splice(source.index, 1);
+      const startFriendIds = Array.from(start.friendIds);
+      startFriendIds.splice(source.index, 1);
       const newStart = {
         ...start,
-        taskIds: startTaskIds,
+        friendIds: startFriendIds,
       };
 
-      const finishTaskIds = Array.from(finish.taskIds);
-      finishTaskIds.splice(destination.index, 0, draggableId);
+      const finishFriendIds = Array.from(finish.friendIds);
+      finishFriendIds.splice(destination.index, 0, draggableId);
       const newFinish = {
         ...finish,
-        taskIds: finishTaskIds,
+        friendIds: finishFriendIds,
       };
 
       const newState = {
@@ -98,12 +98,11 @@ class App extends React.Component {
         >
           <Container id="grid-container">
           
-            
             {this.state.columnOrder.map((columnId) => {
               const column = this.state.columns[columnId];
-              const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
+              const friends = column.friendIds.map(friendId => this.state.friends[friendId]);
 
-              return <Column key={column.id} column={column} tasks={tasks} />;
+              return <Column key={column.id} column={column} friends={friends} />;
             })}
           </Container>
       </DragDropContext>
