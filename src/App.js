@@ -5,11 +5,9 @@ import styled from 'styled-components';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from './test';
 import Column from './column';
+import Header from './header';
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 40% 30% 30%;
-`;
+const Container = styled.div``;
 
 class App extends React.Component {
   state = initialData;
@@ -18,16 +16,9 @@ class App extends React.Component {
     document.body.style.color = 'darkgreen';
   };
   
-  // onDragUpdate = update => {
-  //   const { destination } = update;
-  //   const opacity = destination ? 
-  //     destination.index / Object.keys(this.state.tasks).length : 0;
-  //   document.body.style.backgroundColor = `rgba(153, 141, 217, ${opacity})`;
-  // };
 
   onDragEnd = result => {
     document.body.style.color = "inherit";
-    //document.body.style.backgroundColor = "inherit";
 
     const { destination, source, draggableId } = result;
 
@@ -94,7 +85,12 @@ class App extends React.Component {
   };
 
   render() {
+    
+
     return (
+      <div>
+        <Header />
+    
         <DragDropContext
           onDragEnd={this.onDragEnd}
           onDragStart={this.onDragStart}
@@ -111,6 +107,7 @@ class App extends React.Component {
             })}
           </Container>
       </DragDropContext>
+    </div>  
     );
   }
 }

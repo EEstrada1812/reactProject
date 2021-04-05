@@ -1,15 +1,15 @@
 const initialData = {
     tasks: {
-        'task-1' : { id: 'task-1', content: 'images/albert_lamb.jpg', info: 'Max and his dog Rover'},
-        'task-2' : { id: 'task-2', content: 'images/amy_hamster.jpg', info: 'Fred and his dog Rover' },
-        'task-3' : { id: 'task-3', content: 'images/david_dog.jpg', info: 'Tex and his dog Rover'},
-        'task-4' : { id: 'task-4', content: 'images/fred_iguana.jpg', info: 'Mike and his dog Rover'},
-        'task-5' : { id: 'task-5', content: 'images/jackie_dog.jpg', info: 'Mike and his dog Rover'},
-        'task-6' : { id: 'task-6', content: 'images/alex_cat.jpg', info: 'Mike and his dog Rover'},
-        'task-7' : { id: 'task-7', content: 'images/nick_rabbit.jpg', info: 'Mike and his dog Rover'},
-        'task-8' : { id: 'task-8', content: 'images/sara_dog.jpg', info: 'Mike and his dog Rover'},
-        'task-9' : { id: 'task-9', content: 'images/scott_dog.jpg', info: 'Mike and his dog Rover'},
-        'task-10' : { id: 'task-10', content: 'images/william_dog.jpg', info: 'Mike and his dog Rover'},
+        'task-1' : { id: 'task-1', content: 'images/albert_lamb.jpg', info: 'Albert and his pet lamb Sticks.'},
+        'task-2' : { id: 'task-2', content: 'images/amy_hamster.jpg', info: 'Amy and her hamster Penny.' },
+        'task-3' : { id: 'task-3', content: 'images/emily_dog.jpg', info: 'Emily and her dog Rover.'},
+        'task-4' : { id: 'task-4', content: 'images/fred_iguana.jpg', info: 'Fred and his iguana Tex.'},
+        'task-5' : { id: 'task-5', content: 'images/jackie_dog.jpg', info: 'Jackie and her dog Smuckers.'},
+        'task-6' : { id: 'task-6', content: 'images/alex_cat.jpg', info: 'Alex and his cat Tiger.'},
+        'task-7' : { id: 'task-7', content: 'images/nick_rabbit.jpg', info: 'Nick and his rabbit Bugsy.'},
+        'task-8' : { id: 'task-8', content: 'images/sara_dog.jpg', info: 'Sara and her dog Ralph.'},
+        'task-9' : { id: 'task-9', content: 'images/scott_dog.jpg', info: 'Scott and his dog Gus.'},
+        'task-10' : { id: 'task-10', content: 'images/stacy_cat.jpg', info: 'Stacy and her cat Buddy.'},
     },
     columns: {
         'column-1': {

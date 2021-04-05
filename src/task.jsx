@@ -24,9 +24,18 @@ export default class Task extends React.Component {
                         ref={provided.innerRef}
                         isDragging={snapshot.isDragging}
                     >
-                        <img src={this.props.task.content} className="image" alt="profile-img" />
-                        <p>{this.props.task.info}</p>
-                        {/* {this.props.task.content} */}
+                        <div className="card-container">
+                            <div className="customer-thumb image-container">
+                                <img src={this.props.task.content} className="image" alt="profile-img" /> 
+                            </div>
+
+                            <div className="card-title">
+                                <p>{this.props.task.info}</p>
+                            </div>
+                            
+                            {/* {this.props.task.content} */}
+                        </div>
+
                     </Container>
                 )}
 
