@@ -24,7 +24,9 @@ export default class Column extends React.Component {
         return (
             <Container id={this.props.column.title}>
                 <Title>{this.props.column.title}</Title>
-                <Droppable droppableId={this.props.column.id} className="gap">
+                <Droppable 
+                    droppableId={this.props.column.id} 
+                >
                     {(provided, snapshot) => (
                         <FriendList
                             ref={provided.innerRef}

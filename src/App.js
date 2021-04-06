@@ -12,16 +12,11 @@ const Container = styled.div``;
 class App extends React.Component {
   state = initialData;
 
-  onDragStart = () => {
-    document.body.style.color = 'darkgreen';
-  };
-  
-
   onDragEnd = result => {
     document.body.style.color = "inherit";
 
     const { destination, source, draggableId } = result;
-
+    
     if (!destination) {
       return; 
     }
@@ -97,7 +92,7 @@ class App extends React.Component {
           onDragUpdate={this.onDragUpdate}
         >
           <Container id="grid-container">
-          
+            
             {this.state.columnOrder.map((columnId) => {
               const column = this.state.columns[columnId];
               const friends = column.friendIds.map(friendId => this.state.friends[friendId]);

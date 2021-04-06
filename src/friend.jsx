@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { Draggable } from 'react-beautiful-dnd';
 import "./index.css";
-
-
 const Container = styled.div`
     border: 1px solid lightgrey;
     border-radius: 2px;
@@ -12,12 +10,14 @@ const Container = styled.div`
     background-color: ${props => (props.isDragging ? '#ff4d41' : 'white')};
 `;
 
-
 export default class Friend extends React.Component {
     render() {
         return (
+            
             <Draggable draggableId={this.props.friend.id} index={this.props.index}>
+                
                 {(provided, snapshot) => (
+                    
                     <Container
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
@@ -34,7 +34,7 @@ export default class Friend extends React.Component {
                             </div>
 
                         </div>
-
+                        
                     </Container>
                 )}
 
